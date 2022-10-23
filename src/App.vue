@@ -1,14 +1,18 @@
 <template>
   <MovieHeader />
   <NavBar />
+  <router-view></router-view>
+  <MovieFooter />
 </template>
 
 <script>
-import MovieHeader from "./components/MovieHeader.vue";
+import MovieHeader from "./components/MovieHeader";
+import MovieFooter from "./components/MovieFooter";
 import NavBar from "./components/NavBar";
+
 export default {
   name: "App",
-  components: { MovieHeader, NavBar },
+  components: { MovieHeader, NavBar, MovieFooter },
 };
 </script>
 

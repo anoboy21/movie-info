@@ -1,19 +1,18 @@
 <template>
-  <header>
+  <footer>
     <p>20120353</p>
-    <h1>Movies Info</h1>
-    <p>k_ir8hoai5</p>
-  </header>
+    <p>Huynh Huu Phuoc</p>
+  </footer>
 </template>
 
 <script>
 export default {
-  name: "MovieHeader",
+  name: "MovieFooter",
 };
 </script>
 
 <style scoped>
-header {
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
