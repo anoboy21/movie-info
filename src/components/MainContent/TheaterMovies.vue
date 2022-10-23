@@ -9,7 +9,11 @@
         <router-link :to="`/${movie.id}`">
           <img :src="movie.image" class="d-block w-100" alt="movie" />
           <div class="carousel-caption d-none d-md-block">
-            <h5>{{ movie.fullTitle }}</h5>
+            <div class="info">
+              <h5>{{ movie.fullTitle }}</h5>
+              <p>Rating: {{ movie.imDbRating }}</p>
+              <p>Length: {{ movie.runtimeStr }}</p>
+            </div>
           </div>
         </router-link>
       </div>
@@ -51,6 +55,7 @@ export default {
     const data = await res.json();
 
     this.movies = data.items.slice(0, 5);
+    console.log(data.items.slice(0, 5));
   },
 };
 </script>
@@ -63,6 +68,12 @@ img {
   border-radius: 8px;
   margin: 0 auto;
   transition: all 0.3s;
+}
+
+.info {
+  background-color: #333;
+  width: 30%;
+  margin: 0 auto;
 }
 
 img:hover {

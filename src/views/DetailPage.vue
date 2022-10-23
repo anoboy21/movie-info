@@ -1,12 +1,17 @@
 <template>
-  <div>Detail {{ $route.params.id }}</div>
+  <div>Detail for movies with ID: {{ $route.params.id }}</div>
 </template>
 
 <script>
 export default {
   name: "DetailPage",
   data() {
-    return {};
+    return {
+      detail: {},
+    };
+  },
+  async created() {
+    // const res = await fetch("");
   },
 };
 </script>
